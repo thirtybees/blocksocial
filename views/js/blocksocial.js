@@ -27,7 +27,7 @@
     clickHandler: function (e) {
       e.preventDefault();
       $elem = $(e.target);
-      var id = $elem.attr('id');
+      var id;
       var depth = 0;
       do {
         id = $elem.parent().attr('id');
