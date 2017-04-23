@@ -24,7 +24,7 @@
 *  International Registered Trademark & Property of PrestaShop SA
 *}
 
-<aside id="social_block">
+<nav id="social_block">
 	<h4 class="title_block">{l s='Follow us' mod='blocksocial'}</h4>
 	<ul>
 		{if $facebook_url != ''}<li class="facebook"><a class="_blank" href="{$facebook_url|escape:html:'UTF-8'}" onclick="ga('send', 'social', 'Facebook', 'send', '{$facebook_url|escape:html:'UTF-8'}');return true;">{l s='Facebook' mod='blocksocial'}</a></li>{/if}
@@ -36,4 +36,4 @@
 		{if $vimeo_url != ''}<li class="vimeo"><a href="{$vimeo_url|escape:html:'UTF-8'}" onclick="ga('send', 'social', 'Vimeo', 'send', {$vimeo_url|escape:html:'UTF-8'}');return true;">{l s='Vimeo' mod='blocksocial'}</a></li>{/if}
 		{if $instagram_url != ''}<li class="instagram"><a class="_blank" href="{$instagram_url|escape:html:'UTF-8'}" onclick="ga('send', 'social', 'Instagram', 'send', {$instagram_url|escape:html:'UTF-8'}');return true;">{l s='Instagram' mod='blocksocial'}</a></li>{/if}
 	</ul>
-</aside>
+</nav>
