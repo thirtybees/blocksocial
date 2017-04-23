@@ -25,6 +25,7 @@
 (function() {
   window.blocksocial = {
     clickHandler: function (e) {
+      if (typeof window.ga === 'function') {
       e.preventDefault();
       $elem = $(e.target);
       var id;
@@ -90,8 +91,9 @@
           break;
       }
 
-      if (medium && typeof window.ga === 'function') {
+        if (medium) {
         window.ga('send', 'social', medium, 'send');
+      }
       }
 
       return true;
