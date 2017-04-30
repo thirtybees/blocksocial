@@ -34,6 +34,33 @@
         case 'blocksocial_instagram':
           medium = 'Instagram';
           break;
+        case 'blocksocial_vk':
+          medium = 'VK';
+          break;
+        case 'blocksocial_linkedin':
+          medium = 'Linked In';
+          break;
+        case 'blocksocial_wordpress':
+          medium = 'Wordpress';
+          break;
+        case 'blocksocial_blogger':
+          medium = 'Blogger';
+          break;
+        case 'blocksocial_tumblr':
+          medium = 'Tumblr';
+          break;
+        case 'blocksocial_snapchat':
+          medium = 'Snapchat';
+          break;
+        case 'blocksocial_reddit':
+          medium = 'Reddit';
+          break;
+        case 'blocksocial_yelp':
+          medium = 'Yelp';
+          break;
+        case 'blocksocial_medium':
+          medium = 'Medium';
+          break;
         default:
           medium = '';
           break;
@@ -61,6 +88,15 @@
       $('#blocksocial_pinterest').on('click', window.blocksocial.clickHandler);
       $('#blocksocial_vimeo').on('click', window.blocksocial.clickHandler);
       $('#blocksocial_instagram').on('click', window.blocksocial.clickHandler);
+      $('#blocksocial_vk').on('click', window.blocksocial.clickHandler);
+      $('#blocksocial_linkedin').on('click', window.blocksocial.clickHandler);
+      $('#blocksocial_wordpress').on('click', window.blocksocial.clickHandler);
+      $('#blocksocial_blogger').on('click', window.blocksocial.clickHandler);
+      $('#blocksocial_tumblr').on('click', window.blocksocial.clickHandler);
+      $('#blocksocial_snapchat').on('click', window.blocksocial.clickHandler);
+      $('#blocksocial_reddit').on('click', window.blocksocial.clickHandler);
+      $('#blocksocial_yelp').on('click', window.blocksocial.clickHandler);
+      $('#blocksocial_medium').on('click', window.blocksocial.clickHandler);
     });
   }
 
