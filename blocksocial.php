@@ -207,9 +207,9 @@ class blocksocial extends Module
                     ],
                     [
                         'type'  => 'text',
-                        'label' => $this->l('Linked In URL:'),
+                        'label' => $this->l('LinkedIn URL:'),
                         'name'  => 'blocksocial_linkedin',
-                        'desc'  => $this->l('Your official Linked In account.'),
+                        'desc'  => $this->l('Your official LinkedIn account.'),
                     ],
                     [
                         'type'  => 'text',

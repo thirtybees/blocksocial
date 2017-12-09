@@ -38,7 +38,7 @@
           medium = 'VK';
           break;
         case 'blocksocial_linkedin':
-          medium = 'Linked In';
+          medium = 'LinkedIn';
           break;
         case 'blocksocial_wordpress':
           medium = 'Wordpress';
