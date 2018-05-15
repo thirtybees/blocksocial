@@ -46,7 +46,7 @@ class blocksocial extends Module
         $this->bootstrap = true;
         parent::__construct();
 
-        $this->displayName = $this->l('Social networking block');
+        $this->displayName = $this->l('Block Social Networking');
         $this->description = $this->l('Allows you to add information about your brand\'s social networking accounts.');
         $this->ps_versions_compliancy = ['min' => '1.6', 'max' => '1.6.99.99'];
         $this->tb_versions_compliancy = '~1.0.0';
