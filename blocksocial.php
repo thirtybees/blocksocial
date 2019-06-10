@@ -60,25 +60,39 @@ class blocksocial extends Module
      */
     public function install()
     {
-        return (parent::install() AND Configuration::updateValue('BLOCKSOCIAL_FACEBOOK', '') &&
-            Configuration::updateValue('BLOCKSOCIAL_TWITTER', '') &&
-            Configuration::updateValue('BLOCKSOCIAL_RSS', '') &&
-            Configuration::updateValue('BLOCKSOCIAL_YOUTUBE', '') &&
-            Configuration::updateValue('BLOCKSOCIAL_GOOGLE_PLUS', '') &&
-            Configuration::updateValue('BLOCKSOCIAL_PINTEREST', '') &&
-            Configuration::updateValue('BLOCKSOCIAL_VIMEO', '') &&
-            Configuration::updateValue('BLOCKSOCIAL_INSTAGRAM', '') &&
-            Configuration::updateValue('BLOCKSOCIAL_VK', '') &&
-            Configuration::updateValue('BLOCKSOCIAL_LINKEDIN', '') &&
-            Configuration::updateValue('BLOCKSOCIAL_WORDPRESS', '') &&
-            Configuration::updateValue('BLOCKSOCIAL_AMAZON', '') &&
-            Configuration::updateValue('BLOCKSOCIAL_TUMBLR', '') &&
-            Configuration::updateValue('BLOCKSOCIAL_SNAPCHAT', '') &&
-            Configuration::updateValue('BLOCKSOCIAL_REDDIT', '') &&
-            Configuration::updateValue('BLOCKSOCIAL_YELP', '') &&
-            Configuration::updateValue('BLOCKSOCIAL_MEDIUM', '') &&
-            $this->registerHook('displayHeader') &&
-            $this->registerHook('displayFooter'));
+        $return = parent::install();
+
+        // Pre-fill some with thirty bees to show how it works.
+        $return &= Configuration::updateValue(
+            'BLOCKSOCIAL_FACEBOOK', 'https://www.facebook.com/thirtybees'
+        );
+        $return &= Configuration::updateValue(
+            'BLOCKSOCIAL_TWITTER', 'https://twitter.com/thethirtybees'
+        );
+        $return &= Configuration::updateValue(
+            'BLOCKSOCIAL_RSS', 'https://thirtybees.com/feed'
+        );
+        $return &= Configuration::updateValue(
+            'BLOCKSOCIAL_GOOGLE_PLUS', 'https://plus.google.com/+thirtybees'
+        );
+        $return &= Configuration::updateValue('BLOCKSOCIAL_YOUTUBE', '');
+        $return &= Configuration::updateValue('BLOCKSOCIAL_PINTEREST', '');
+        $return &= Configuration::updateValue('BLOCKSOCIAL_VIMEO', '');
+        $return &= Configuration::updateValue('BLOCKSOCIAL_INSTAGRAM', '');
+        $return &= Configuration::updateValue('BLOCKSOCIAL_VK', '');
+        $return &= Configuration::updateValue('BLOCKSOCIAL_LINKEDIN', '');
+        $return &= Configuration::updateValue('BLOCKSOCIAL_WORDPRESS', '');
+        $return &= Configuration::updateValue('BLOCKSOCIAL_AMAZON', '');
+        $return &= Configuration::updateValue('BLOCKSOCIAL_TUMBLR', '');
+        $return &= Configuration::updateValue('BLOCKSOCIAL_SNAPCHAT', '');
+        $return &= Configuration::updateValue('BLOCKSOCIAL_REDDIT', '');
+        $return &= Configuration::updateValue('BLOCKSOCIAL_YELP', '');
+        $return &= Configuration::updateValue('BLOCKSOCIAL_MEDIUM', '');
+
+        $return &= $this->registerHook('displayHeader');
+        $return &= $this->registerHook('displayFooter');
+
+        return $return;
     }
 
     /**
