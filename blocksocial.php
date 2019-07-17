@@ -72,9 +72,6 @@ class blocksocial extends Module
         $return &= Configuration::updateValue(
             'BLOCKSOCIAL_RSS', 'https://thirtybees.com/feed'
         );
-        $return &= Configuration::updateValue(
-            'BLOCKSOCIAL_GOOGLE_PLUS', 'https://plus.google.com/+thirtybees'
-        );
         $return &= Configuration::updateValue('BLOCKSOCIAL_YOUTUBE', '');
         $return &= Configuration::updateValue('BLOCKSOCIAL_PINTEREST', '');
         $return &= Configuration::updateValue('BLOCKSOCIAL_VIMEO', '');
@@ -107,7 +104,6 @@ class blocksocial extends Module
             && Configuration::deleteByName('BLOCKSOCIAL_TWITTER')
             && Configuration::deleteByName('BLOCKSOCIAL_RSS')
             && Configuration::deleteByName('BLOCKSOCIAL_YOUTUBE')
-            && Configuration::deleteByName('BLOCKSOCIAL_GOOGLE_PLUS')
             && Configuration::deleteByName('BLOCKSOCIAL_PINTEREST')
             && Configuration::deleteByName('BLOCKSOCIAL_VIMEO')
             && Configuration::deleteByName('BLOCKSOCIAL_INSTAGRAM')
@@ -137,7 +133,6 @@ class blocksocial extends Module
             Configuration::updateValue('BLOCKSOCIAL_TWITTER', Tools::getValue('blocksocial_twitter', ''));
             Configuration::updateValue('BLOCKSOCIAL_RSS', Tools::getValue('blocksocial_rss', ''));
             Configuration::updateValue('BLOCKSOCIAL_YOUTUBE', Tools::getValue('blocksocial_youtube', ''));
-            Configuration::updateValue('BLOCKSOCIAL_GOOGLE_PLUS', Tools::getValue('blocksocial_google_plus', ''));
             Configuration::updateValue('BLOCKSOCIAL_PINTEREST', Tools::getValue('blocksocial_pinterest', ''));
             Configuration::updateValue('BLOCKSOCIAL_VIMEO', Tools::getValue('blocksocial_vimeo', ''));
             Configuration::updateValue('BLOCKSOCIAL_INSTAGRAM', Tools::getValue('blocksocial_instagram', ''));
@@ -189,12 +184,6 @@ class blocksocial extends Module
                         'label' => $this->l('YouTube URL'),
                         'name'  => 'blocksocial_youtube',
                         'desc'  => $this->l('Your official YouTube account.'),
-                    ],
-                    [
-                        'type'  => 'text',
-                        'label' => $this->l('Google+ URL:'),
-                        'name'  => 'blocksocial_google_plus',
-                        'desc'  => $this->l('Your official Google+ page.'),
                     ],
                     [
                         'type'  => 'text',
@@ -301,7 +290,6 @@ class blocksocial extends Module
             'blocksocial_twitter'     => Tools::getValue('blocksocial_twitter', Configuration::get('BLOCKSOCIAL_TWITTER')),
             'blocksocial_rss'         => Tools::getValue('blocksocial_rss', Configuration::get('BLOCKSOCIAL_RSS')),
             'blocksocial_youtube'     => Tools::getValue('blocksocial_youtube', Configuration::get('BLOCKSOCIAL_YOUTUBE')),
-            'blocksocial_google_plus' => Tools::getValue('blocksocial_google_plus', Configuration::get('BLOCKSOCIAL_GOOGLE_PLUS')),
             'blocksocial_pinterest'   => Tools::getValue('blocksocial_pinterest', Configuration::get('BLOCKSOCIAL_PINTEREST')),
             'blocksocial_vimeo'       => Tools::getValue('blocksocial_vimeo', Configuration::get('BLOCKSOCIAL_VIMEO')),
             'blocksocial_instagram'   => Tools::getValue('blocksocial_instagram', Configuration::get('BLOCKSOCIAL_INSTAGRAM')),
@@ -325,7 +313,6 @@ class blocksocial extends Module
                 'blocksocial_twitter_url'     => Configuration::get('BLOCKSOCIAL_TWITTER'),
                 'blocksocial_rss_url'         => Configuration::get('BLOCKSOCIAL_RSS'),
                 'blocksocial_youtube_url'     => Configuration::get('BLOCKSOCIAL_YOUTUBE'),
-                'blocksocial_google_plus_url' => Configuration::get('BLOCKSOCIAL_GOOGLE_PLUS'),
                 'blocksocial_pinterest_url'   => Configuration::get('BLOCKSOCIAL_PINTEREST'),
                 'blocksocial_vimeo_url'       => Configuration::get('BLOCKSOCIAL_VIMEO'),
                 'blocksocial_instagram_url'   => Configuration::get('BLOCKSOCIAL_INSTAGRAM'),
@@ -354,7 +341,6 @@ class blocksocial extends Module
                     'twitter_url'     => Configuration::get('BLOCKSOCIAL_TWITTER'),
                     'rss_url'         => Configuration::get('BLOCKSOCIAL_RSS'),
                     'youtube_url'     => Configuration::get('BLOCKSOCIAL_YOUTUBE'),
-                    'google_plus_url' => Configuration::get('BLOCKSOCIAL_GOOGLE_PLUS'),
                     'pinterest_url'   => Configuration::get('BLOCKSOCIAL_PINTEREST'),
                     'vimeo_url'       => Configuration::get('BLOCKSOCIAL_VIMEO'),
                     'instagram_url'   => Configuration::get('BLOCKSOCIAL_INSTAGRAM'),
